@@ -49,7 +49,7 @@ npm install pinecone-router-middleware-{middleware-name}
 ```javascript
 // load this middleware
 import 'pinecone-router-middleware-{middleware-name}';
-// then load alpinejs router
+// then load pinecone router
 import 'pinecone-router';
 ```
 
