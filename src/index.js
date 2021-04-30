@@ -1,4 +1,4 @@
-const AlpineRouterMiddleware = {
+const PineconeRouterMiddleware = {
 	/**
 	 * @property {string} version the version of this middleware.
 	 */
@@ -29,7 +29,7 @@ const AlpineRouterMiddleware = {
 	onBeforeRouteProcessed(el, component, path) {},
 
 	/**
-	 * This will be called inside AlpineRouter.interceptLinks() function
+	 * This will be called inside PineconeRouter.interceptLinks() function
 	 * after the link is checked as a valid navigation link.
 	 * @param {Element} el the anchor element
 	 */
@@ -37,7 +37,7 @@ const AlpineRouterMiddleware = {
 
 	/**
 	 * Will be called before the handlers are executed.
-	 * during navigation (AlpineRouter.navigate()).
+	 * during navigation (PineconeRouter.navigate()).
 	 * @param {object} route the matched route, null if not found.
 	 * @param {string} path the path visited by the client
 	 * @param {boolean} firstload first page load and not link navigation request
@@ -48,7 +48,7 @@ const AlpineRouterMiddleware = {
 
 	/**
 	 * Will be called after the handlers are executed and done.
-	 * during navigation (AlpineRouter.navigate()).
+	 * during navigation (PineconeRouter.navigate()).
 	 * @param {object} route the matched route, null if not found.
 	 * @param {string} path the path visited by the client
 	 * @param {boolean} firstload first page load and not link navigation request
@@ -58,6 +58,6 @@ const AlpineRouterMiddleware = {
 	onHandlersExecuted(route, path, firstload, notfound) {},
 };
 
-if (window.AlpineRouterMiddlewares == null)
-	window.AlpineRouterMiddlewares = [AlpineRouterMiddleware];
-else window.AlpineRouterMiddlewares.push(AlpineRouterMiddleware);
+if (window.PineconeRouterMiddlewares == null)
+	window.PineconeRouterMiddlewares = [PineconeRouterMiddleware];
+else window.PineconeRouterMiddlewares.push(PineconeRouterMiddleware);
