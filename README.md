@@ -44,7 +44,7 @@ npm install alpinejs-router-middleware-{middleware-name}
 ```
 
 ```javascript
-// load alpine router
+// load this middleware
 import 'alpinejs-router-middleware-{middleware-name}';
 // then load alpinejs router
 import 'alpinejs-router';
