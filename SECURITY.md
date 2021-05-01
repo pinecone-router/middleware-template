@@ -10,4 +10,4 @@ versions currently being supported with security updates:
 
 ## Reporting a Vulnerability
 
-Please email me rehhouari AT gmail.com with the vulnerability details and I'll get back to you quickly!
+Please email me {security-email} with the vulnerability details and I'll get back to you quickly!

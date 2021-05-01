@@ -17,6 +17,7 @@ Be sure to do a site wide search/replace for the following:
 {current-year} - Example: 2021
 {package-description} - Example: The summary
 {repository} - Example: The full repository path, like pinecone-router/middleware-template
+{security-email} - Example john @ example.com
 ```
 
 ## About
