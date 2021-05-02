@@ -29,13 +29,6 @@ const PineconeRouterMiddleware = {
 	onBeforeRouteProcessed(el, component, path) {},
 
 	/**
-	 * This will be called inside PineconeRouter.interceptLinks() function
-	 * after the link is checked as a valid navigation link.
-	 * @param {Element} el the anchor element
-	 */
-	onLinkIntercepted(el) {},
-
-	/**
 	 * Will be called before the handlers are executed.
 	 * during navigation (PineconeRouter.navigate()).
 	 * @param {object} route the matched route, null if not found.
