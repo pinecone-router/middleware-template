@@ -6,7 +6,7 @@ const PineconeRouterMiddleware = {
 	/**
 	 * @property {string} name the name of the middleware.
 	 */
-	name: 'x-middleware',
+	name: 'middleware',
 	/**
 	 * @property {object} settings the middleware settings.
 	 */
@@ -17,7 +17,13 @@ const PineconeRouterMiddleware = {
 	 * used for detecting router settings.
 	 * @param {object} component the router's alpine component.
 	 */
-	init(component) {},
+	init(component, settings) {
+		//load settings
+		this.settings = {
+			...this.settings,
+			...(settings?.middlewares?.[this.name] ?? {}),
+		};
+	},
 
 	/**
 	 * Called for each route during initalization,
@@ -35,7 +41,7 @@ const PineconeRouterMiddleware = {
 	 * @param {string} path the path visited by the client
 	 * @param {boolean} firstload first page load and not link navigation request
 	 * @param {boolean} notfound set to true if the route wasnt found
-	 * @returns {boolean} false to make the navigate function exit (make sure to send the loadend event); none to continute execution.
+	 * @returns {string|null} 'stop' to make the navigate function exit (make sure to send the loadend event); none to continute execution.
 	 */
 	onBeforeHandlersExecuted(route, path, firstload, notfound) {},
 
@@ -46,7 +52,7 @@ const PineconeRouterMiddleware = {
 	 * @param {string} path the path visited by the client
 	 * @param {boolean} firstload first page load and not link navigation request
 	 * @param {boolean} notfound set to true if the route wasnt found
-	 * @returns {boolean} false to make the navigate function exit (make sure to send the loadend event); none to continute execution.
+	 * @returns {string|null} 'stop' to make the navigate function exit (make sure to send the loadend event); none to continute execution.
 	 */
 	onHandlersExecuted(route, path, firstload, notfound) {},
 };
