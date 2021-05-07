@@ -26,7 +26,7 @@ const PineconeRouterMiddleware = {
 	},
 
 	/**
-	 * Called for each route during initalization,
+	 * Called for each route during initialization,
 	 * before the route is processed & added.
 	 * @param {Element} el the route's <template> element
 	 * @param {object} component the router's alpine component
@@ -37,24 +37,22 @@ const PineconeRouterMiddleware = {
 	/**
 	 * Will be called before the handlers are executed.
 	 * during navigation (PineconeRouter.navigate()).
-	 * @param {object} route the matched route, null if not found.
+	 * @param {object} route the matched route, undefined if not found.
 	 * @param {string} path the path visited by the client
 	 * @param {boolean} firstload first page load and not link navigation request
-	 * @param {boolean} notfound set to true if the route wasnt found
 	 * @returns {string|null} 'stop' to make the navigate function exit (make sure to send the loadend event); none to continute execution.
 	 */
-	onBeforeHandlersExecuted(route, path, firstload, notfound) {},
+	onBeforeHandlersExecuted(route, path, firstload) {},
 
 	/**
 	 * Will be called after the handlers are executed and done.
 	 * during navigation (PineconeRouter.navigate()).
-	 * @param {object} route the matched route, null if not found.
+	 * @param {object} route the matched route, undefined if not found.
 	 * @param {string} path the path visited by the client
 	 * @param {boolean} firstload first page load and not link navigation request
-	 * @param {boolean} notfound set to true if the route wasnt found
 	 * @returns {string|null} 'stop' to make the navigate function exit (make sure to send the loadend event); none to continute execution.
 	 */
-	onHandlersExecuted(route, path, firstload, notfound) {},
+	onHandlersExecuted(route, path, firstload) {},
 };
 
 if (window.PineconeRouterMiddlewares == null)
