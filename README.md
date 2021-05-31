@@ -37,7 +37,7 @@ Include the following `<script>` tag in the `<head>` of your document, before Pi
 **ES6 Module:**
 
 ```javascript
-import 'https://cdn.jsdelivr.net/npm/pinecone-router-middleware-{middleware-name}@0.0.0/dist/index.umd.js';
+import 'https://cdn.jsdelivr.net/npm/pinecone-router-middleware-{middleware-name}@0.0.0/dist/index.module.js';
 ```
 
 ### NPM
@@ -87,7 +87,7 @@ function router() {
 
 | Version | Pinecone Router Versions |
 | ------- | ------------------------ |
-| 0.0.0   | 0.3.0                    |
+| 0.0.0   | 1.0.0                    |
 
 ## Contributing:
 
