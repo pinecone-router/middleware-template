@@ -57,37 +57,13 @@ import 'pinecone-router';
 
 ## Usage
 
-1. Enable render middleware in the router [Settings](https://pinecone-router/router/#settings):
-
-```js
-function router() {
-	return {
-		settings: {
-			middlewares: {
-				{middleware-name}: {
-					enable: true;
-				}
-			}
-		}
-	}
-```
-
-2. Usage information.
-
-### Settings
-
-```js
-{middleware-name}: {
-	enable: true,
-	...
-}
-```
+usage info
 
 ## Supported versions
 
 | Version | Pinecone Router Versions |
 | ------- | ------------------------ |
-| 0.0.0   | 1.0.0                    |
+| 0.0.0   | 2.0.0                    |
 
 ## Contributing:
 

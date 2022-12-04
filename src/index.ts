@@ -6,36 +6,28 @@ const PineconeRouterMiddleware = {
 	/**
 	 * @property {string} name the name of the middleware.
 	 */
-	name: 'middleware',
-	/**
-	 * @property {object} settings the middleware settings.
-	 */
-	settings: {},
-
+	name: '{middleware-name}',
 	/**
 	 * This will be called at router initialization.
-	 * used for detecting router settings.
-	 * @param {object} component the router's alpine component.
-	 */
-	init(component, settings) {
-		//load settings
-		this.settings = {
-			...this.settings,
-			...(settings?.middlewares?.[this.name] ?? {}),
-		};
-	},
 
+	 */
+	init(el, path) {},
 	/**
 	 * Called for each route during initialization,
 	 * before the route is processed & added.
 	 * @param {Element} el the route's <template> element
-	 * @param {object} component the router's alpine component
 	 * @param {string} path the route's path
 	 */
-	onBeforeRouteProcessed(el, component, path) {},
-
+	onBeforeRouteProcessed(el, path) {},
 	/**
-	 * Will be called before the handlers are executed.
+	 * Called for each route during initialization,
+	 * after the route is processed & added.
+	 * @param {Element} el the route's <template> element
+	 * @param {string} path the route's path
+	 */
+	onAfterRouteProcessed(el, path) {},
+	/**
+	 * Will be called before the handlers are executed and done.
 	 * during navigation (PineconeRouter.navigate()).
 	 * @param {object} route the matched route, undefined if not found.
 	 * @param {string} path the path visited by the client
@@ -47,6 +39,7 @@ const PineconeRouterMiddleware = {
 	/**
 	 * Will be called after the handlers are executed and done.
 	 * during navigation (PineconeRouter.navigate()).
+	 * this wont be executed if a handler redirected
 	 * @param {object} route the matched route, undefined if not found.
 	 * @param {string} path the path visited by the client
 	 * @param {boolean} firstload first page load and not link navigation request
