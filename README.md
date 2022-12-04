@@ -28,7 +28,7 @@ What does this middleware do.
 
 ### CDN
 
-Include the following `<script>` tag in the `<head>` of your document, before Pinecone Router:
+Include the following `<script>` tag in the `<head>` of your document, *before Pinecone Router*:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/pinecone-router-{middleware-name}@0.0.0/dist/index.umd.js"></script>
